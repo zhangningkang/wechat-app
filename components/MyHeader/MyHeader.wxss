@@ -1,0 +1,34 @@
+/* components/MyHeader/MyHeader.wxss */
+.myhead{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 10rpx;
+}
+
+.logo{
+    flex: 7;
+}
+
+.search{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download{
+    flex: 3;
+    font-size: 30rpx;
+    color: white;
+    padding: 10rpx;
+    background-color: pink;
+    border-radius: 10rpx;
+}

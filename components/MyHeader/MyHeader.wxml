@@ -1,0 +1,21 @@
+<!--components/MyHeader/MyHeader.wxml-->
+<view class="myhead">
+    <!-- logo -->
+    <navigator class="logo">
+        <image class="logo-image" src="../../icons/logo2.png" style="width:140rpx;height:60rpx;"></image>
+    </navigator>
+    <!-- search -->
+    <view class="search">
+        <image class="search-image" src="../../icons/search.png" style="width:60rpx;height:60rpx;">
+            
+        </image>
+    </view>
+    <!-- user-image -->
+        <view class="user">
+        <image class="user-image" src="../../icons/user.png" style="width:60rpx;height:60rpx;"></image>
+    </view>
+    <!-- downloade-button -->
+    <view class="download">
+        下载 APP
+    </view>
+</view>

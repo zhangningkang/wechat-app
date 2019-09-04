@@ -1,0 +1,55 @@
+<view class="main" hover-class="none" hover-stop-propagation="false">
+    <MyHeader></MyHeader>
+    <!-- 首页导航 -->
+    <view class="nav_wrap">
+        <!-- wx的组件 -->
+        <scroll-view class="nav" scroll-x="{{true}}">
+            <view bindtap="activeNav" data-index="{{index}}"
+            class="nav_item {{index===currentActiveIndex?'active':''}}" wx:for="{{navList}}" wx:key="{{index}}">
+                {{item.text}}
+            </view>
+        </scroll-view>
+    </view>
+    <!-- 轮播图组件 -->
+    <view class="slides" >
+        <swiper  autoplay indicator-dots circular>
+            <swiper-item wx:for="{{swiperList}}" wx:key="{{index}}">
+               <navigator>
+                   <image src="{{item.imgSrc}}">
+                       
+                   </image>
+               </navigator> 
+                
+            </swiper-item>
+        </swiper>
+    </view>
+    <!-- 视频列表 -->
+    <view class="video_wrap">
+        <navigator url="../detail/detail?id={{item.id}}" class="video_item" wx:for="{{videosList}}" wx:key="{{index}}">
+            <!-- 图片容器 -->
+            <view class="img_wrap">
+                <!-- 图片 -->
+                <image mode="widthFix" src="{{item.imgSrc}}"></image>
+                <!-- 播放量和评论量容器 -->
+                <view class="info_wrap">
+                    <!-- 图标和数值容器1 -->
+                    <view class="play_count_wrap">
+                        <!-- 图标 -->
+                        <text class="fa fa-play-circle-o"></text>
+                        <!-- 数值 -->
+                        <text class="play_count">{{item.playCount}}</text>
+                    </view>
+                    <!-- 图标和数值容器2 -->
+                    <view class="comment_count_wrap">
+                        <!-- 图标 -->
+                        <text class="fa fa-commenting-o"></text>
+                        <!-- 数值 -->
+                        <text class="comment_count">{{item.commentCount}}</text>
+                    </view>
+                </view>
+            </view>
+            <!-- title -->
+            <view class="title">{{item.desc}}</view>
+        </navigator>
+    </view>
+</view>
